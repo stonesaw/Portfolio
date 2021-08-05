@@ -1,40 +1,31 @@
 <template>
-  <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
+  <v-app id="inspire">
+    <v-navigation-drawer app
+      v-model="drawer"
     >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+      <v-list shaped>
+        <v-list-item
+          v-for="item in items"
+          :key="item.title"
+          link
+        >
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
+    <v-app-bar app
+      color="#eee"
+      flat
+    >
+      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+      <v-toolbar-title>Sou's Portfolio</v-toolbar-title>
     </v-app-bar>
 
     <v-main>
@@ -53,8 +44,16 @@ export default {
     HelloWorld,
   },
 
-  data: () => ({
-    //
-  }),
-};
+  data () {
+    return {
+      drawer: false,
+      items: [
+        { title: 'About', icon: 'mdi-home' },
+        { title: 'Skills', icon: 'mdi-xml' },
+        { title: 'Works', icon: 'mdi-hexagon-multiple' },
+        { title: 'Contests', icon: 'mdi-medal-outline' },
+      ],
+    }
+  },
+}
 </script>
