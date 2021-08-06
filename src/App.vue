@@ -1,12 +1,13 @@
 <template>
   <v-app id="inspire">
     <v-navigation-drawer app
-      v-model="drawer"
+      expand-on-hover
     >
       <v-list shaped>
         <v-list-item
           v-for="item in items"
           :key="item.title"
+          :href="item.link"
           link
         >
           <v-list-item-icon>
@@ -19,29 +20,35 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar app
-      color="#eee"
-      flat
-    >
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-
-      <v-toolbar-title>Sou's Portfolio</v-toolbar-title>
-    </v-app-bar>
-
     <v-main>
+      <About/>
       <HelloWorld/>
+      <Skills/>
+      <Works/>
+      <Contests/>
+      <Footer/>
     </v-main>
   </v-app>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld';
+import About from './components/About';
+import Skills from './components/Skills';
+import Works from './components/Works';
+import Contests from './components/Contests';
+import Footer from './components/Footer';
 
 export default {
   name: 'App',
 
   components: {
     HelloWorld,
+    About,
+    Skills,
+    Works,
+    Contests,
+    Footer
   },
 
   data () {
@@ -54,6 +61,12 @@ export default {
         { title: 'Contests', icon: 'mdi-medal-outline' },
       ],
     }
+  },
+
+  created() {
+    this.items.forEach(item => {
+      item.link = `#${item.title}`;
+    });
   },
 }
 </script>
