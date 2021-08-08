@@ -22,7 +22,6 @@
 
     <v-main>
       <About/>
-      <HelloWorld/>
       <Skills/>
       <Works/>
       <Contests/>
@@ -32,7 +31,6 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
 import About from './components/About';
 import Skills from './components/Skills';
 import Works from './components/Works';
@@ -43,7 +41,6 @@ export default {
   name: 'App',
 
   components: {
-    HelloWorld,
     About,
     Skills,
     Works,
