@@ -4,7 +4,8 @@
       <v-col cols="12">
         <v-img
           :aspect-ratio="1/1"
-          :src="require('../assets/icon-high.png')"
+          src="../assets/icon-high.png"
+          lazy-src="../assets/icon.png"
           class="rounded-circle"
           width="500px"
           style="display: block; margin: auto;"
