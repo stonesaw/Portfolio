@@ -12,7 +12,7 @@
       </v-col>
 
       <v-col class="mb-3">
-        <h1 class="display-2 font-weight-bold mb-3">
+        <h1 class="display-2 font-weight-bold mb-2">
           Sou Ishihara
         </h1>
 
@@ -22,12 +22,14 @@
         </p>
       </v-col>
 
-      <!-- outline -->
+      <!-- outlines -->
+
+      <!-- 最後の要素だけ last-item クラスを付ける  -->
       <v-col
         cols="12"
-        v-for="outline in outlines"
+        v-for="(outline, index) in outlines"
         :key="outline.title"
-        class=""
+        :class="{ 'last-item': index == outlines.length - 1 }"
       >
         <h2 class="headline font-weight-bold mb-3">
           {{ outline.title }}
@@ -45,12 +47,13 @@
         </v-row>
       </v-col>
     </v-row>
+    <v-divider></v-divider>
   </v-container>
 </template>
 
 <script>
   export default {
-    name: 'HelloWorld',
+    name: 'About',
 
     data: () => ({
       outlines: [
@@ -61,3 +64,9 @@
     }),
   }
 </script>
+
+<style>
+  .last-item {
+    margin-bottom: 3rem;
+  }
+</style>
