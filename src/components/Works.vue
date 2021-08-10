@@ -21,10 +21,10 @@
               :aspect-ratio="16/9"
             ></v-img>
 
-            <v-card-title>
+            <v-card-title class="pt-3">
               {{ work.title }}
             </v-card-title>
-            <v-card-subtitle style="padding-bottom: 3px">
+            <v-card-subtitle class="pb-0">
               {{ work.subtitle }}
             </v-card-subtitle>
 
