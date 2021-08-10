@@ -2,7 +2,10 @@
   <v-container id="Works">
     <v-row>
       <v-col cols="12">
-        <h1 class="display-2 font-weight-bold text-center my-3">Works</h1>
+        <h1 class="display-2 font-weight-bold text-center my-3">
+          <v-icon class="display-2 pb-3">mdi-hexagon-multiple</v-icon>
+          Works
+        </h1>
       </v-col>
     </v-row>
 

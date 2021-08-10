@@ -3,6 +3,7 @@
     <v-row class="text-center">
       <v-col cols="12">
         <h1 class="display-2 font-weight-bold my-3">
+          <v-icon class="display-2 pb-3">mdi-xml</v-icon>
           Skills
         </h1>
 
