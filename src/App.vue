@@ -7,7 +7,7 @@
         <v-list-item
           v-for="item in items"
           :key="item.title"
-          :href="item.link"
+          @click="$vuetify.goTo(item.link, {duration: 500})"
           link
         >
           <v-list-item-icon>
@@ -62,7 +62,7 @@ export default {
 
   created() {
     this.items.forEach(item => {
-      item.link = `#${item.title}`;
+      item.link = `#${item.title.toLowerCase()}`;
     });
   },
 }

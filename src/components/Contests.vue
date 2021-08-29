@@ -1,6 +1,6 @@
 <template>
   <v-container
-    id="Contests"
+    id="contests"
     class="text-center"
   >
     <v-row>

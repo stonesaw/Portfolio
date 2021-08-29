@@ -1,5 +1,5 @@
 <template>
-  <v-container id="Skills">
+  <v-container id="skills">
     <v-row class="text-center">
       <v-col cols="12">
         <h1 class="display-2 font-weight-bold my-3">
