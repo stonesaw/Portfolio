@@ -60,25 +60,58 @@
 </template>
 
 <script>
+import isWebpSupported from './isWebpSupported'
+
 export default {
   name: "Works",
 
+  computed: {
+    format () {
+      return isWebpSupported ? 'webp' : 'jpg'
+    }
+  },
+
+  methods: {
+    fomat_file_name (file_name) {
+      if (isWebpSupported) {
+        return file_name.replace(/\.jpg$/, '.webp');
+      } else {
+        return file_name;
+      }
+    }
+  },
+
+  created() {
+    this.default_thumbnail = require(`@/assets/icon-high.${this.format}`);
+    this.default_thumbnail_lazy = require(`@/assets/icon.${this.format}`);
+
+    this.works.forEach(work => {
+      if (work.thumbnail) {
+        work.thumbnail = require("../assets/" + this.fomat_file_name(work.thumbnail));
+      }
+      if (work.thumbnail_lazy) {
+        work.thumbnail_lazy = require("../assets/" + this.fomat_file_name(work.thumbnail_lazy));
+      }
+    });
+  },
+
   data: () => ({
-    default_thumbnail: require("../assets/icon-high.png"),
-    default_thumbnail_lazy: require("../assets/icon.png"),
+    default_thumbnail: null,
+    default_thumbnail_lazy: null,
+
     works: [
       {
         title: "Portfolio",
         subtitle: "My portfolio, built with Vue.js and Vuetify",
-        thumbnail: require("../assets/portfolio.jpg"),
+        thumbnail: "portfolio.jpg",
         thumbnail_lazy: null,
         libs: ["Vue.js", "Vuetify"],
-        github: "https://github.com/stonesaw/Portfolio",
+        github: "https://github.com/stonesaw/portfolio",
       },
       {
         title: "Spell Out",
         subtitle: "Shooting game. Can be played with just a mouse.",
-        thumbnail: require("../assets/spell-out.jpg"),
+        thumbnail: "spell-out.jpg",
         thumbnail_lazy: null,
         libs: ["Ruby", "DXRuby", "RuboCop"],
         github: "https://github.com/stonesaw/Spell-Out",

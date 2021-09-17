@@ -4,8 +4,8 @@
       <v-col cols="12">
         <v-img
           :aspect-ratio="1/1"
-          src="../assets/icon-high.png"
-          lazy-src="../assets/icon.png"
+          :src="icon_image"
+          :lazy-src="icon_image_lazy"
           class="rounded-circle"
           width="500px"
           style="display: block; margin: auto;"
@@ -53,10 +53,26 @@
 </template>
 
 <script>
+  import isWebpSupported from './isWebpSupported'
+
   export default {
     name: 'About',
 
+    computed: {
+      format () {
+        return isWebpSupported ? 'webp' : 'jpg'
+      }
+    },
+
+    created() {
+      this.icon_image = require(`@/assets/icon-high.${this.format}`);
+      this.icon_image_lazy = require(`@/assets/icon.${this.format}`);
+    },
+
     data: () => ({
+      icon_image: null,
+      icon_image_lazy: null,
+      
       outlines: [
         { title: 'School', items: ['松江工業高等専門学校'] },
         { title: 'Editor', items: ['vscode'] },
