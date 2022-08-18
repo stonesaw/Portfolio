@@ -18,8 +18,8 @@
         </h1>
 
         <p class="subheading font-weight-regular">
-          学生・ゲーム開発が好き
-          <br>たまに、ドット絵を描きます
+          ゲームやWebアプリを作っています
+          <br>よく寝ます
         </p>
       </v-col>
 
@@ -72,11 +72,11 @@
     data: () => ({
       icon_image: null,
       icon_image_lazy: null,
-      
       outlines: [
-        { title: 'School', items: ['松江工業高等専門学校'] },
+        { title: 'School', items: ['松江工業高等専門学校 (休学中)'] },
+        { title: 'Company', items: ['(株)ネットワーク応用通信研究所'] },
         { title: 'Editor', items: ['vscode'] },
-        { title: 'Listen', items: ['millenium parade', '藤井風', 'lofi hip hop'] },
+        { title: 'Hobby / Likes', items: ['programming', 'music (i/o)', 'pixel art'] },
       ]
     }),
   }
