@@ -1,6 +1,7 @@
 <template>
   <v-app id="inspire">
-    <v-navigation-drawer app
+    <v-navigation-drawer
+      app
       expand-on-hover
     >
       <v-list shaped>
