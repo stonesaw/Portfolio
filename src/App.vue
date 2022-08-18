@@ -21,7 +21,7 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-main>
+    <v-main style="padding: 0px 0px 0px 56px;">
       <About/>
       <Skills/>
       <Works/>
