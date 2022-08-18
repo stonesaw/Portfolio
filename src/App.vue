@@ -3,6 +3,7 @@
     <v-navigation-drawer
       app
       expand-on-hover
+      width="56"
     >
       <v-list shaped>
         <v-list-item
@@ -21,7 +22,7 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-main style="padding: 0px 0px 0px 56px;">
+    <v-main>
       <AppAbout/>
       <AppSkills/>
       <AppWorks/>
