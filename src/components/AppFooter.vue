@@ -35,14 +35,14 @@
 
 <script>
 export default {
-  name: 'Footer',
+  name: "AppFooter",
 
   data () {
     return {
       accounts: [
-        { title: 'twitter', icon: 'mdi-twitter', link: 'https://twitter.com/sou_0x0v' },
-        { title: 'github', icon: 'mdi-github', link: 'https://github.com/stonesaw' },
-        { title: 'mail', icon: 'mdi-email', link: 'mailto:mail.sou.dev@gmail.com' },
+        { title: "twitter", icon: "mdi-twitter", link: "https://twitter.com/sou_0x0v" },
+        { title: "github", icon: "mdi-github", link: "https://github.com/stonesaw" },
+        { title: "mail", icon: "mdi-email", link: "mailto:mail.sou.dev@gmail.com" },
       ]
     }
   }

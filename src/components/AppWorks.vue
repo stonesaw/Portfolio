@@ -60,21 +60,21 @@
 </template>
 
 <script>
-import isWebpSupported from './isWebpSupported'
+import isWebpSupported from "./isWebpSupported"
 
 export default {
-  name: "Works",
+  name: "AppWorks",
 
   computed: {
     format () {
-      return isWebpSupported ? 'webp' : 'jpg'
+      return isWebpSupported ? "webp" : "jpg"
     }
   },
 
   methods: {
     format_file_name (file_name) {
       if (isWebpSupported) {
-        return file_name.replace(/\.jpg$/, '.webp');
+        return file_name.replace(/\.jpg$/, ".webp");
       } else {
         return file_name;
       }

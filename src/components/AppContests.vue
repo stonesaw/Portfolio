@@ -42,28 +42,29 @@
 
 <script>
 export default {
-  name: 'Contests',
+  name: "AppContests",
+
   data() {
     return {
       contents: [
         {
-          name: '第30回 高専プロコン (2019)',
-          result: 'サブメンバーとして参加',
-          link: 'https://www.procon.gr.jp/?cat=1661'
+          name: "第30回 高専プロコン (2019)",
+          result: "サブメンバーとして参加",
+          link: "https://www.procon.gr.jp/?cat=1661"
         },
         {
-          name: '中高生国際Rubyプログラミングコンテスト 2020',
-          result: 'ゲーム部門 最優秀賞',
-          link: 'https://www.ruby-procon.net/'
+          name: "中高生国際Rubyプログラミングコンテスト 2020",
+          result: "ゲーム部門 最優秀賞",
+          link: "https://www.ruby-procon.net/"
         },
         {
-          name: '第32回 高専プロコン (2020)',
-          result: '特別賞 / サブメンバーとして参加',
-          link: 'https://www.procon.gr.jp/?cat=1680'
+          name: "第32回 高専プロコン (2020)",
+          result: "特別賞 / サブメンバーとして参加",
+          link: "https://www.procon.gr.jp/?cat=1680"
         },
         {
-          name: '技育展2021 登壇',
-          link: 'https://talent.supporterz.jp/geekten/2021/'
+          name: "技育展2021 登壇",
+          link: "https://talent.supporterz.jp/geekten/2021/"
         },
       ]
     }

@@ -53,33 +53,33 @@
 </template>
 
 <script>
-  import isWebpSupported from './isWebpSupported'
+import isWebpSupported from "./isWebpSupported"
 
-  export default {
-    name: 'About',
+export default {
+  name: "AppAbout",
 
-    computed: {
-      format () {
-        return isWebpSupported ? 'webp' : 'jpg'
-      }
-    },
+  computed: {
+    format () {
+      return isWebpSupported ? "webp" : "jpg"
+    }
+  },
 
-    created() {
-      this.icon_image = require(`@/assets/icon-high.${this.format}`);
-      this.icon_image_lazy = require(`@/assets/icon.${this.format}`);
-    },
+  created() {
+    this.icon_image = require(`@/assets/icon-high.${this.format}`);
+    this.icon_image_lazy = require(`@/assets/icon.${this.format}`);
+  },
 
-    data: () => ({
-      icon_image: null,
-      icon_image_lazy: null,
-      outlines: [
-        { title: 'School', items: ['松江工業高等専門学校 (休学中)'] },
-        { title: 'Company', items: ['(株)ネットワーク応用通信研究所'] },
-        { title: 'Editor', items: ['vscode'] },
-        { title: 'Hobby / Likes', items: ['programming', 'music (i/o)', 'pixel art'] },
-      ]
-    }),
-  }
+  data: () => ({
+    icon_image: null,
+    icon_image_lazy: null,
+    outlines: [
+      { title: "School", items: ["松江工業高等専門学校 (休学中)"] },
+      { title: "Company", items: ["(株)ネットワーク応用通信研究所"] },
+      { title: "Editor", items: ["vscode"] },
+      { title: "Hobby / Likes", items: ["programming", "music (i/o)", "pixel art"] },
+    ]
+  }),
+}
 </script>
 
 <style>

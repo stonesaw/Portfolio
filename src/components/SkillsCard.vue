@@ -43,7 +43,7 @@
 
 <script>
 export default {
-  name: 'SkillsCard',
+  name: "SkillsCard",
 
   props: {
     name: String,
@@ -53,9 +53,9 @@ export default {
   },
 
   created() {
-    const ary = this.color.split(' ');
+    const ary = this.color.split(" ");
     if (ary.length >= 3) {
-      console.error('wrong languages.color format!');
+      console.error("wrong languages.color format!");
       return;
     }
     if (ary[0]) { this.color_text = `${ary[0]}--text`; }
