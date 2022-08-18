@@ -52,7 +52,7 @@ export default {
     return {
       drawer: false,
       items: [
-        { title: 'About', icon: 'mdi-home' },
+        { title: 'About', icon: 'mdi-console' },
         { title: 'Skills', icon: 'mdi-xml' },
         { title: 'Works', icon: 'mdi-hexagon-multiple' },
         { title: 'Contests', icon: 'mdi-medal-outline' },

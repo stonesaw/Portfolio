@@ -48,23 +48,15 @@ export default {
         // ref https://vuetifyjs.com/ja/styles/colors/#section-30de30c630ea30a230eb30ab30e930fc
         color: 'red accent-1',
         libs: [
-          'DXRuby', 'cli', 'RuboCop', 'YARD'
+          'Rails', 'RSpec', 'Minitest', 'DXRuby', 'CLI', 'RuboCop'
         ]
       },
-      { 
-        name: 'Python',
-        color: 'blue lighten-2',
-        icon: 'mdi-language-python',
-        libs: [
-          'Pillow', 'Discord.py', 'Pygame'
-        ]
-      },
-      { 
+      {
         name: 'HTML/CSS',
         icon: 'mdi-language-html5',
-        color: 'orange lighten-2',
+        color: 'orange darken-2',
         libs: [
-          'HTML 5', 'CSS 3', 'Bootstrap'
+          'HTML5', 'CSS3', 'Tailwind'
         ]
       },
       {
@@ -72,9 +64,49 @@ export default {
         icon: 'mdi-language-javascript',
         color: 'amber lighten-2',
         libs: [
-          'npm', 'Vue.js', 'Vuetify', 'Anime.js'
+          'Vue.js', 'Vuetify', 'npm', 'yarn'
         ]
-      }
+      },
+      {
+        name: 'TypeScript',
+        icon: 'mdi-language-typescript',
+        color: 'blue darken-2',
+        libs: [
+          'MIDI', 'Next.js', 'Chakra UI'
+        ]
+      },
+      {
+        name: 'Python',
+        color: 'blue lighten-2',
+        icon: 'mdi-language-python',
+        libs: [
+          'Pillow', 'Discord.py', 'Pygame'
+        ]
+      },
+      {
+        name: 'C++',
+        color: 'indigo lighten-2',
+        icon: 'mdi-language-cpp',
+        libs: [
+          'AtCoder', 'DxLib'
+        ]
+      },
+      {
+        name: 'Git',
+        icon: 'mdi-git',
+        color: 'deep-orange accent-2',
+        libs: [
+          'Basic'
+        ]
+      },
+      {
+        name: 'GitHub',
+        icon: 'mdi-github',
+        color: 'grey darken-4',
+        libs: [
+          'Actions'
+        ]
+      },
     ]
   }),
 }

@@ -11,7 +11,7 @@
 
     <v-row style="padding: 0 7% 3rem 7%">
       <v-col
-        cols="12" xs="12" sm="6" md="4" lg="4"
+        cols="12" xs="12" sm="6" md="6" lg="4" xl="3"
         v-for="work in works"
         :key="work.title"
       >
@@ -72,7 +72,7 @@ export default {
   },
 
   methods: {
-    fomat_file_name (file_name) {
+    format_file_name (file_name) {
       if (isWebpSupported) {
         return file_name.replace(/\.jpg$/, '.webp');
       } else {
@@ -87,10 +87,10 @@ export default {
 
     this.works.forEach(work => {
       if (work.thumbnail) {
-        work.thumbnail = require("../assets/" + this.fomat_file_name(work.thumbnail));
+        work.thumbnail = require("../assets/" + this.format_file_name(work.thumbnail));
       }
       if (work.thumbnail_lazy) {
-        work.thumbnail_lazy = require("../assets/" + this.fomat_file_name(work.thumbnail_lazy));
+        work.thumbnail_lazy = require("../assets/" + this.format_file_name(work.thumbnail_lazy));
       }
     });
   },
@@ -102,7 +102,7 @@ export default {
     works: [
       {
         title: "Portfolio",
-        subtitle: "My portfolio, built with Vue.js and Vuetify",
+        subtitle: "ポートフォリオサイト。Vue.js と Vuetify を使用",
         thumbnail: "portfolio.jpg",
         thumbnail_lazy: null,
         libs: ["Vue.js", "Vuetify"],
@@ -110,11 +110,35 @@ export default {
       },
       {
         title: "Spell Out",
-        subtitle: "Shooting game. Can be played with just a mouse.",
+        subtitle: "基本マウスのみの アクションシューティング。Rubyでゼロから開発",
         thumbnail: "spell-out.jpg",
         thumbnail_lazy: null,
         libs: ["Ruby", "DXRuby", "RuboCop"],
         github: "https://github.com/stonesaw/Spell-Out",
+      },
+      {
+        title: "cli",
+        subtitle: "コマンドライン風ポートフォリオ",
+        thumbnail: "cli.png",
+        thumbnail_lazy: null,
+        libs: ["Vue.js", "TypeScript", "Jest"],
+        github: "https://github.com/stonesaw/Spell-Out",
+      },
+      {
+        title: "Jumping Ichiyo",
+        subtitle: "ichiyoを数式で動かすボット from 限界開発鯖 (ネタ)",
+        thumbnail: "jump_resize.gif",
+        thumbnail_lazy: null,
+        libs: ["Python", "Discord.py", "Pillow"],
+        github: "https://github.com/stonesaw/jumping-ichiyo",
+      },
+      {
+        title: "Ruby CUI Game",
+        subtitle: "学校の春休み課題で作ったもの。CUI用のゲームライブラリから作った",
+        thumbnail: "cli-mario.png",
+        thumbnail_lazy: null,
+        libs: ["Ruby", "CLI"],
+        github: "https://github.com/stonesaw/Ruby-CUI-game",
       },
     ],
   }),
