@@ -30,10 +30,10 @@
 </template>
 
 <script>
-import SkillsCard from './SkillsCard'
+import SkillsCard from "./SkillsCard"
 
 export default {
-  name: 'Skills',
+  name: "AppSkills",
 
   components: {
     SkillsCard
@@ -42,69 +42,69 @@ export default {
   data: () => ({
     languages: [
       {
-        name: 'Ruby',
-        icon: 'mdi-language-ruby',
+        name: "Ruby",
+        icon: "mdi-language-ruby",
         // color usage
         // ref https://vuetifyjs.com/ja/styles/colors/#section-30de30c630ea30a230eb30ab30e930fc
-        color: 'red accent-1',
+        color: "red accent-1",
         libs: [
-          'Rails', 'RSpec', 'Minitest', 'DXRuby', 'CLI', 'RuboCop'
+          "Rails", "RSpec", "Minitest", "DXRuby", "CLI", "RuboCop"
         ]
       },
       {
-        name: 'HTML/CSS',
-        icon: 'mdi-language-html5',
-        color: 'orange darken-2',
+        name: "HTML/CSS",
+        icon: "mdi-language-html5",
+        color: "orange darken-2",
         libs: [
-          'HTML5', 'CSS3', 'Tailwind'
+          "HTML5", "CSS3", "Tailwind"
         ]
       },
       {
-        name: 'JavaScript',
-        icon: 'mdi-language-javascript',
-        color: 'amber lighten-2',
+        name: "JavaScript",
+        icon: "mdi-language-javascript",
+        color: "amber lighten-2",
         libs: [
-          'Vue.js', 'Vuetify', 'npm', 'yarn'
+          "Vue.js", "Vuetify", "npm", "yarn"
         ]
       },
       {
-        name: 'TypeScript',
-        icon: 'mdi-language-typescript',
-        color: 'blue darken-2',
+        name: "TypeScript",
+        icon: "mdi-language-typescript",
+        color: "blue darken-2",
         libs: [
-          'MIDI', 'Next.js', 'Chakra UI'
+          "MIDI", "Next.js", "Chakra UI"
         ]
       },
       {
-        name: 'Python',
-        color: 'blue lighten-2',
-        icon: 'mdi-language-python',
+        name: "Python",
+        color: "blue lighten-2",
+        icon: "mdi-language-python",
         libs: [
-          'Pillow', 'Discord.py', 'Pygame'
+          "Pillow", "Discord.py", "Pygame"
         ]
       },
       {
-        name: 'C++',
-        color: 'indigo lighten-2',
-        icon: 'mdi-language-cpp',
+        name: "C++",
+        color: "indigo lighten-2",
+        icon: "mdi-language-cpp",
         libs: [
-          'AtCoder', 'DxLib'
+          "AtCoder", "DxLib"
         ]
       },
       {
-        name: 'Git',
-        icon: 'mdi-git',
-        color: 'deep-orange accent-2',
+        name: "Git",
+        icon: "mdi-git",
+        color: "deep-orange accent-2",
         libs: [
-          'Basic'
+          "Basic"
         ]
       },
       {
-        name: 'GitHub',
-        icon: 'mdi-github',
-        color: 'grey darken-4',
+        name: "GitHub",
+        icon: "mdi-github",
+        color: "grey darken-4",
         libs: [
-          'Actions'
+          "Actions"
         ]
       },
     ]

@@ -22,41 +22,41 @@
     </v-navigation-drawer>
 
     <v-main style="padding: 0px 0px 0px 56px;">
-      <About/>
-      <Skills/>
-      <Works/>
-      <Contests/>
-      <Footer/>
+      <AppAbout/>
+      <AppSkills/>
+      <AppWorks/>
+      <AppContests/>
+      <AppFooter/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import About from './components/About';
-import Skills from './components/Skills';
-import Works from './components/Works';
-import Contests from './components/Contests';
-import Footer from './components/Footer';
+import AppAbout from "./components/AppAbout";
+import AppSkills from "./components/AppSkills";
+import AppWorks from "./components/AppWorks";
+import AppContests from "./components/AppContests";
+import AppFooter from "./components/AppFooter";
 
 export default {
-  name: 'App',
+  name: "App",
 
   components: {
-    About,
-    Skills,
-    Works,
-    Contests,
-    Footer
+    AppAbout,
+    AppSkills,
+    AppWorks,
+    AppContests,
+    AppFooter
   },
 
   data () {
     return {
       drawer: false,
       items: [
-        { title: 'About', icon: 'mdi-console' },
-        { title: 'Skills', icon: 'mdi-xml' },
-        { title: 'Works', icon: 'mdi-hexagon-multiple' },
-        { title: 'Contests', icon: 'mdi-medal-outline' },
+        { title: "About", icon: "mdi-console" },
+        { title: "Skills", icon: "mdi-xml" },
+        { title: "Works", icon: "mdi-hexagon-multiple" },
+        { title: "Contests", icon: "mdi-medal-outline" },
       ],
     }
   },
